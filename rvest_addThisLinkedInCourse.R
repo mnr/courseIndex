@@ -38,6 +38,12 @@ infoAboutLILCourses <-  unique(infoAboutLILCourses)
 
 save(infoAboutLILCourses, file = "infoAboutLILCourses.rds")
 
+# example add this to files
+affiliate <- "https://linkedin-learning.pxf.io/rwkly_dataSets"
+video <- "r-built-in-data-sets"
+topics <- "data()"
+
+
 # stuff for later
 course <- " "
 video <- " "
