@@ -1,18 +1,24 @@
 ---
 title: "Index to LinkedIn Learning R topics"
-output: github_document:
+output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, echo=FALSE}
 
-linkto <- function(courseURL, videoURL, linkText) {
-  # returns a deeplink, including affiliate tag when available
-  paste0("[", linkText, "](https://www.linkedin.com/learning/", courseURL, "/", videoURL, ")")
+load("../masterIndexdf.rds")
+sortedMstrIdx <- masterIndexdf[order(masterIndexdf$theText),]
+
+kable_formatALine <- function(x, caption, escape) {
+  alltext <- ""
+  for (arow in 1:nrow(x)) {
+    alltext <- paste0(alltext,"[", x[arow,1], "](",x[arow,2],")  \n")
+  }
+  return(alltext)
 }
+
+knitr::kable(sortedMstrIdx, format = "formatALine")
 ```
 
-# test
-`r linkto("r-programming-in-data-science-high-variety-data", "jumping-over-the-high-variety-hurdle", "welcome to high variety")` that should be a link
+
 
 
