@@ -1,3 +1,10 @@
+# to build a index.rmd
+# 1) Scrape the linkedin learning site with addThisLinkedInCourse.R
+# 2) for each source file in rweekly directory, build key/value index with idx_build.R
+# 3) Build index.rmd with buildAnindex/index.rmd
+
+
+# this is the function to build the key/value pairs and place them in masterIndexdf
 # I expect this...
 
 # idx_affiliate <- ""
