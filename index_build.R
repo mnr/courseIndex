@@ -36,8 +36,8 @@ idx_build <- function(idx_affiliate, idx_video, idx_task, idx_topics) {
     
   }
   
-  masterIndexdf <<- rbind(masterIndexdf, linkTopicToURL)
-  
+  masterIndexdf <<- rbind(masterIndexdf, linkTopicToURL) # add the new row to masterIndexdf
+  masterIndexdf <<- unique(masterIndexdf) # filter out duplicates
 }
 
 # rebuild masterIndexDF
