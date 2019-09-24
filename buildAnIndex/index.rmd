@@ -11,7 +11,7 @@ sortedMstrIdx <- masterIndexdf[order(masterIndexdf$theText),]
 kable_formatALine <- function(x, caption, escape) {
   alltext <- ""
   for (arow in 1:nrow(x)) {
-    alltext <- paste0(alltext,"[", x[arow,1], "](",x[arow,2],")  \n")
+    alltext <- paste0(alltext,"[", x[arow,2], "](",x[arow,3],")  \n")
   }
   return(alltext)
 }
